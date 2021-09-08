@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import clsx from 'clsx';
-import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+import withStyles from '@mui/styles/withStyles';
+import Button from '@mui/material/Button';
+import Paper from '@mui/material/Paper';
 import { withSnackbar } from 'notistack';
 
 const styles = {

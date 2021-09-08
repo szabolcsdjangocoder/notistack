@@ -1,6 +1,6 @@
 import React from 'react';
 import clsx from 'clsx';
-import { makeStyles } from '@material-ui/core/styles';
+import makeStyles from '@mui/styles/makeStyles';
 import { SNACKBAR_INDENTS } from './utils/constants';
 import { SnackbarProviderProps } from '.';
 
@@ -17,7 +17,7 @@ const useStyle = makeStyles(theme => ({
         width: 'auto',
         minWidth: 288,
         transition: theme.transitions.create(['top', 'right', 'bottom', 'left'], { easing: 'ease' }),
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             left: '0 !important',
             right: '0 !important',
             width: '100%',
@@ -40,7 +40,7 @@ const useStyle = makeStyles(theme => ({
     center: {
         left: '50%',
         transform: 'translateX(-50%)',
-        [theme.breakpoints.down('xs')]: {
+        [theme.breakpoints.down('sm')]: {
             transform: 'translateX(0)',
         },
     },
