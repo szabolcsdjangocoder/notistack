@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import clsx from 'clsx';
-import { withStyles, WithStyles, createStyles, Theme, emphasize } from '@material-ui/core/styles';
-import Collapse from '@material-ui/core/Collapse';
+import { Theme, emphasize } from '@mui/material/styles';
+import { WithStyles } from '@mui/styles';
+import withStyles from '@mui/styles/withStyles';
+import createStyles from '@mui/styles/createStyles';
+import Collapse from '@mui/material/Collapse';
 import SnackbarContent from '../SnackbarContent';
 import { getTransitionDirection, omitNonCollapseKeys } from './SnackbarItem.util';
 import { allClasses, REASONS, SNACKBAR_INDENTS, objectMerge, DEFAULTS, transformer } from '../utils/constants';
@@ -13,7 +16,7 @@ import Snackbar from './Snackbar';
 
 const styles = (theme: Theme) => {
     // @ts-ignore
-    const mode = theme.palette.mode || theme.palette.type;
+    const mode = theme.palette.mode || theme.palette.mode;
     const backgroundColor = emphasize(theme.palette.background.default, mode === 'light' ? 0.8 : 0.98);
     return createStyles({
         ...allClasses.mui,
@@ -66,7 +69,7 @@ const styles = (theme: Theme) => {
             left: 0,
         },
         collapseContainer: {
-            [theme.breakpoints.down('xs')]: {
+            [theme.breakpoints.down('sm')]: {
                 paddingLeft: theme.spacing(1),
                 paddingRight: theme.spacing(1),
             },
